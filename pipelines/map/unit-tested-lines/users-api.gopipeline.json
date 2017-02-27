@@ -1,0 +1,145 @@
+{
+  "group": "Commit2",
+  "name": "UsersApi2",
+  "label_template": "${COUNT}",
+  "enable_pipeline_locking": false,
+  "tracking_tool": null,
+  "timer": null,
+  "environment_variables": [],
+  "materials": [{
+    "url": "https://github.com/caseycurry/LucaUsersApi",
+    "branch": "master",
+    "filter": null,
+    "destination": null,
+    "auto_update": true,
+    "name": null,
+    "type": "git"
+  }],
+  "stages": [{
+    "name": "Build",
+    "fetch_materials": true,
+    "never_cleanup_artifacts": false,
+    "clean_working_directory": true,
+    "environment_variables": [{
+      "name": "PATH",
+      "value": "/usr/local/bin:/usr/bin:/bin"
+    }],
+    "jobs": [{
+      "name": "Build",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/usr/local/bin/npm",
+        "arguments": [
+          "install"
+        ],
+        "working_directory": null
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/usr/local/bin/npm",
+        "arguments": [
+          "install",
+          "mochawesome",
+          "mocha-multi"
+        ],
+        "working_directory": null
+      }]
+    }]
+  }, {
+    "name": "UnitTest",
+    "fetch_materials": false,
+    "never_cleanup_artifacts": false,
+    "clean_working_directory": false,
+    "environment_variables": [{
+      "name": "PATH",
+      "value": "/usr/local/bin:/usr/bin:/bin"
+    }],
+    "jobs": [{
+      "name": "UnitTest",
+      "environment_variables": [],
+      "tabs": [{
+        "name": "Reports",
+        "path": "mochawesome/mochawesome.html"
+      }],
+      "resources": [],
+      "artifacts": [{
+        "source": "mochawesome-reports/**/*",
+        "destination": "mochawesome",
+        "type": "build"
+      }, {
+        "source": "specs.xml",
+        "destination": null,
+        "type": "test"
+      }],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
+          "node_modules/.bin/mocha --opts mocha.opts  --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
+        ],
+        "working_directory": null
+      }]
+    }]
+  }, {
+    "name": "Package",
+    "fetch_materials": false,
+    "never_cleanup_artifacts": false,
+    "clean_working_directory": false,
+    "environment_variables": [{
+      "name": "PATH",
+      "value": "/usr/local/bin:/usr/bin:/bin"
+    }],
+    "jobs": [{
+      "name": "Package",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [{
+        "source": "dist/**/*",
+        "destination": "dist",
+        "type": "build"
+      }, {
+        "source": "version.txt",
+        "destination": null,
+        "type": "build"
+      }],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "node_modules/.bin/webpack",
+        "arguments": [],
+        "working_directory": null
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
+          "printf $GO_REVISION > version.txt"
+        ],
+        "working_directory": null
+      }]
+    }]
+  }]
+}
