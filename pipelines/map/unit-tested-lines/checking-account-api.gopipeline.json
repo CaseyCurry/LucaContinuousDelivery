@@ -127,10 +127,7 @@
         "run_if": "passed",
         "on_cancel": null,
         "command": "node_modules/.bin/webpack",
-        "arguments": [
-          "-c",
-          "node_modules/.bin/mocha --opts mocha.opts  --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
-        ],
+        "arguments": [],
         "working_directory": null
       }, {
         "type": "exec",
