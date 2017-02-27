@@ -29,7 +29,7 @@
     },
     {
       "pipeline": "CheckingAccountApi",
-      "stage": "Build",
+      "stage": "Package",
       "type": "dependency",
       "name": "CheckingAccountApi"
     },
@@ -65,7 +65,7 @@
     }
   ],
   "stages": [{
-    "name": "InstallDependencies",
+    "name": "FetchDependencies",
     "fetch_materials": true,
     "never_cleanup_artifacts": false,
     "clean_working_directory": true,
@@ -74,7 +74,7 @@
       "value": "/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
-      "name": "InstallDependencies",
+      "name": "FetchDependencies",
       "environment_variables": [],
       "tabs": [],
       "resources": [],
@@ -122,8 +122,8 @@
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "CheckingAccountApi",
-        "stage": "Build",
-        "job": "Build",
+        "stage": "Package",
+        "job": "Package",
         "is_source_a_file": false,
         "source": "dist",
         "destination": "ops/environment/services/checking-account/api"
@@ -131,8 +131,8 @@
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "CheckingAccountApi",
-        "stage": "Build",
-        "job": "Build",
+        "stage": "Package",
+        "job": "Package",
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/checking-account/api"
@@ -229,7 +229,7 @@
       }]
     }]
   }, {
-    "name": "StartEnvironment",
+    "name": "TestEndToEnd",
     "fetch_materials": false,
     "never_cleanup_artifacts": false,
     "clean_working_directory": false,

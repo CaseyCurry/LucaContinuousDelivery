@@ -16,7 +16,7 @@
     "type": "git"
   }],
   "stages": [{
-    "name": "Commit",
+    "name": "Build",
     "fetch_materials": true,
     "never_cleanup_artifacts": false,
     "clean_working_directory": true,
@@ -25,7 +25,7 @@
       "value": "/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
-      "name": "InstallDependencies",
+      "name": "Build",
       "environment_variables": [],
       "tabs": [],
       "resources": [],
@@ -97,7 +97,7 @@
       }]
     }]
   }, {
-    "name": "Build",
+    "name": "Package",
     "fetch_materials": false,
     "never_cleanup_artifacts": false,
     "clean_working_directory": false,
@@ -106,7 +106,7 @@
       "value": "/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
-      "name": "Build",
+      "name": "Package",
       "environment_variables": [],
       "tabs": [],
       "resources": [],
