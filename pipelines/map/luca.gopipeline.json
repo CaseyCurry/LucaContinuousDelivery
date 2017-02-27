@@ -1,0 +1,281 @@
+{
+  "name": "Luca",
+  "environment_variables": [],
+  "group": "Map2",
+  "materials": [{
+      "url": "https://github.com/caseycurry/LucaOpsEnvironment",
+      "type": "git",
+      "destination": "ops/environment",
+      "filter": {
+        "ignore": [
+          "ops/environment/containers"
+        ]
+      }
+    },
+    {
+      "pipeline": "Application",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "CategoriesApi",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "CheckingAccountApi",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "CheckingAccountClient",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "ServiceRegistryApi",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "ServiceRegistryClient",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "UsersApi",
+      "stage": "Build",
+      "type": "dependency"
+    },
+    {
+      "pipeline": "UsersClient",
+      "stage": "Build",
+      "type": "dependency"
+    }
+  ],
+  "stages": [{
+    "name": "InstallDependencies",
+    "fetch_materials": true,
+    "never_cleanup_artifacts": false,
+    "clean_working_directory": true,
+    "environment_variables": [{
+      "name": "PATH",
+      "value": "/usr/local/bin:/usr/bin:/bin"
+    }],
+    "jobs": [{
+      "name": "InstallDependencies",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "Application",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "Application",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CategoriesApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CategoriesApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CheckingAccountApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CheckingAccountApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CheckingAccountClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "CheckingAccountClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "ServiceRegistryApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "ServiceRegistryApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "ServiceRegistryClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "ServiceRegistryClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "UsersApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "UsersApi",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "UsersClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": false,
+        "source": "dist",
+        "destination": "ops/environment/application"
+      }, {
+        "type": "fetch",
+        "run_if": "passed",
+        "pipeline": "UsersClient",
+        "stage": "Build",
+        "job": "Build",
+        "is_source_a_file": true,
+        "source": "version.txt",
+        "destination": "ops/environment/application"
+      }]
+    }, {
+      "name": "StartEnvironment",
+      "fetch_materials": false,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [{
+        "name": "PATH",
+        "value": "/usr/local/bin:/usr/bin:/bin"
+      }],
+      "jobs": [{
+        "name": "StartEnvironment",
+        "environment_variables": [],
+        "tabs": [],
+        "resources": [],
+        "artifacts": [],
+        "properties": [],
+        "run_instance_count": null,
+        "timeout": 0,
+        "tasks": [{
+          "type": "exec",
+          "run_if": "passed",
+          "on_cancel": null,
+          "command": "/usr/local/bin/vagrant",
+          "arguments": [
+            "up"
+          ],
+          "working_directory": "ops/environment"
+        }, {
+          "type": "exec",
+          "run_if": "passed",
+          "on_cancel": null,
+          "command": "/usr/local/bin/vagrant",
+          "arguments": [
+            "ssh",
+            "-c",
+            "sudo /bin/bash -c \"source /vagrant/scripts/start-application.sh\""
+          ],
+          "working_directory": "ops/environment"
+        }, {
+          "type": "exec",
+          "run_if": "any",
+          "on_cancel": null,
+          "command": "/usr/local/bin/vagrant",
+          "arguments": [
+            "destroy",
+            "-f"
+          ],
+          "working_directory": "ops/environment"
+        }, {
+          "type": "exec",
+          "run_if": "any",
+          "on_cancel": null,
+          "command": "/bin/bash",
+          "arguments": [
+            "-c",
+            "source ./scripts/containers/commit.sh"
+          ],
+          "working_directory": "ops/environment"
+        }]
+      }]
+    }]
+  }]
+}
