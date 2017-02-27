@@ -75,7 +75,7 @@
       "artifacts": [{
         "source": "mochawesome-reports/**/*",
         "destination": "mochawesome",
-        "type": null
+        "type": "build"
       }, {
         "source": "specs.xml",
         "destination": null,
@@ -113,11 +113,11 @@
       "artifacts": [{
         "source": "dist/**/*",
         "destination": "dist",
-        "type": null
+        "type": "build"
       }, {
         "source": "version.txt",
         "destination": null,
-        "type": null
+        "type": "build"
       }],
       "properties": [],
       "run_instance_count": null,
