@@ -52,7 +52,7 @@
           "mochawesome",
           "mocha-multi"
         ],
-        "working_directory": "ops/environment"
+        "working_directory": null
       }]
     }]
   }, {
