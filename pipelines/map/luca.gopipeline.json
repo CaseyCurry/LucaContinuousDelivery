@@ -4,14 +4,16 @@
   "group": "Map2",
   "materials": [{
       "url": "https://github.com/caseycurry/LucaOpsEnvironment",
-      "type": "git",
-      "destination": "ops/environment",
+      "branch": "master",
       "filter": {
         "ignore": [
           "ops/environment/containers"
         ]
       },
-      "name": "OpsEnvironment"
+      "destination": "ops/environment",
+      "auto_update": false,
+      "name": "OpsEnvironment",
+      "type": "git"
     },
     {
       "pipeline": "Application",
