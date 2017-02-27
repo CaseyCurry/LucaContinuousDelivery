@@ -11,7 +11,7 @@
         ]
       },
       "destination": "ops/environment",
-      "auto_update": false,
+      "auto_update": true,
       "name": "OpsEnvironment",
       "type": "git"
     },
