@@ -15,42 +15,50 @@
     {
       "pipeline": "Application",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "Application"
     },
     {
       "pipeline": "CategoriesApi",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "CategoriesApi"
     },
     {
       "pipeline": "CheckingAccountApi",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "CheckingAccountApi"
     },
     {
       "pipeline": "CheckingAccountClient",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "CheckingAccountClient"
     },
     {
       "pipeline": "ServiceRegistryApi",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "ServiceRegistryApi"
     },
     {
       "pipeline": "ServiceRegistryClient",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "ServiceRegistryClient"
     },
     {
       "pipeline": "UsersApi",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "UsersApi"
     },
     {
       "pipeline": "UsersClient",
       "stage": "Build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "UsersClient"
     }
   ],
   "stages": [{
