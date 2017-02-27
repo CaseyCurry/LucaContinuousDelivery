@@ -136,7 +136,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "printf $GO_REVISION &gt; version.txt"
+          "printf $GO_REVISION > version.txt"
         ],
         "working_directory": null
       }]
