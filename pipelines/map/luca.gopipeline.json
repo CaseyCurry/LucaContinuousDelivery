@@ -106,7 +106,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/categories/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -115,7 +115,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/categories/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -124,7 +124,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/checking-account/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -133,7 +133,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/checking-account/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -142,7 +142,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/checking-account/client"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -151,7 +151,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/checking-account/client"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -160,7 +160,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/service-registry/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -169,7 +169,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/service-registry/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -178,7 +178,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/service-registry/client"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -187,7 +187,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/service-registry/client"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -196,7 +196,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/users/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -205,7 +205,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/users/api"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -214,7 +214,7 @@
         "job": "Build",
         "is_source_a_file": false,
         "source": "dist",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/users/client"
       }, {
         "type": "fetch",
         "run_if": "passed",
@@ -223,7 +223,7 @@
         "job": "Build",
         "is_source_a_file": true,
         "source": "version.txt",
-        "destination": "ops/environment/application"
+        "destination": "ops/environment/services/users/client"
       }]
     }]
   }, {
