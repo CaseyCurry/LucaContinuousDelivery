@@ -28,7 +28,7 @@
       "name": "CategoriesApi"
     },
     {
-      "pipeline": "CheckingAccountApi",
+      "pipeline": "CheckingAccountApi2",
       "stage": "Package",
       "type": "dependency",
       "name": "CheckingAccountApi"
@@ -121,7 +121,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountApi",
+        "pipeline": "CheckingAccountApi2",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -130,7 +130,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountApi",
+        "pipeline": "CheckingAccountApi2",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
