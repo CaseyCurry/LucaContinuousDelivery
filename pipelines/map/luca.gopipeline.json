@@ -10,7 +10,8 @@
         "ignore": [
           "ops/environment/containers"
         ]
-      }
+      },
+      "name": "OpsEnvironment"
     },
     {
       "pipeline": "Application",
