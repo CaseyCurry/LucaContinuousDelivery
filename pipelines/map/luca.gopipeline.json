@@ -1,7 +1,7 @@
 {
-  "name": "Luca2",
+  "name": "Luca",
   "environment_variables": [],
-  "group": "Map2",
+  "group": "Map",
   "materials": [{
       "url": "https://github.com/caseycurry/LucaOpsEnvironment",
       "branch": "master",
@@ -16,49 +16,49 @@
       "type": "git"
     },
     {
-      "pipeline": "Application2",
+      "pipeline": "Application",
       "stage": "Package",
       "type": "dependency",
       "name": "Application"
     },
     {
-      "pipeline": "CategoriesApi2",
+      "pipeline": "CategoriesApi",
       "stage": "Package",
       "type": "dependency",
       "name": "CategoriesApi"
     },
     {
-      "pipeline": "CheckingAccountApi2",
+      "pipeline": "CheckingAccountApi",
       "stage": "Package",
       "type": "dependency",
       "name": "CheckingAccountApi"
     },
     {
-      "pipeline": "CheckingAccountClient2",
+      "pipeline": "CheckingAccountClient",
       "stage": "Package",
       "type": "dependency",
       "name": "CheckingAccountClient"
     },
     {
-      "pipeline": "ServiceRegistryApi2",
+      "pipeline": "ServiceRegistryApi",
       "stage": "Package",
       "type": "dependency",
       "name": "ServiceRegistryApi"
     },
     {
-      "pipeline": "ServiceRegistryClient2",
+      "pipeline": "ServiceRegistryClient",
       "stage": "Package",
       "type": "dependency",
       "name": "ServiceRegistryClient"
     },
     {
-      "pipeline": "UsersApi2",
+      "pipeline": "UsersApi",
       "stage": "Package",
       "type": "dependency",
       "name": "UsersApi"
     },
     {
-      "pipeline": "UsersClient2",
+      "pipeline": "UsersClient",
       "stage": "Package",
       "type": "dependency",
       "name": "UsersClient"
@@ -85,7 +85,7 @@
       "tasks": [{
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "Application2",
+        "pipeline": "Application",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -94,7 +94,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "Application2",
+        "pipeline": "Application",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -103,7 +103,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CategoriesApi2",
+        "pipeline": "CategoriesApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -112,7 +112,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CategoriesApi2",
+        "pipeline": "CategoriesApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -121,7 +121,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountApi2",
+        "pipeline": "CheckingAccountApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -130,7 +130,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountApi2",
+        "pipeline": "CheckingAccountApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -139,7 +139,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountClient2",
+        "pipeline": "CheckingAccountClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -148,7 +148,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "CheckingAccountClient2",
+        "pipeline": "CheckingAccountClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -157,7 +157,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "ServiceRegistryApi2",
+        "pipeline": "ServiceRegistryApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -166,7 +166,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "ServiceRegistryApi2",
+        "pipeline": "ServiceRegistryApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -175,7 +175,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "ServiceRegistryClient2",
+        "pipeline": "ServiceRegistryClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -184,7 +184,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "ServiceRegistryClient2",
+        "pipeline": "ServiceRegistryClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -193,7 +193,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "UsersApi2",
+        "pipeline": "UsersApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -202,7 +202,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "UsersApi2",
+        "pipeline": "UsersApi",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,
@@ -211,7 +211,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "UsersClient2",
+        "pipeline": "UsersClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": false,
@@ -220,7 +220,7 @@
       }, {
         "type": "fetch",
         "run_if": "passed",
-        "pipeline": "UsersClient2",
+        "pipeline": "UsersClient",
         "stage": "Package",
         "job": "Package",
         "is_source_a_file": true,

@@ -1,6 +1,6 @@
 {
-  "group": "Commit2",
-  "name": "CheckingAccountApi2",
+  "group": "Commit",
+  "name": "CheckingAccountApi",
   "label_template": "${COUNT}",
   "enable_pipeline_locking": false,
   "tracking_tool": null,
