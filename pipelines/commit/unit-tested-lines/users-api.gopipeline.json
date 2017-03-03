@@ -71,10 +71,10 @@
         "encrypted_value": "ze9+9B3d1Ic="
       }],
       "tabs": [{
-        "name": "Test Report",
+        "name": "Report",
         "path": "mochawesome/mochawesome.html"
       }, {
-        "name": "Test Coverage",
+        "name": "Coverage",
         "path": "coverage/lcov-report/index.html"
       }],
       "resources": [],
