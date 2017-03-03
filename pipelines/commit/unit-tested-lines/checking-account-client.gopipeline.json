@@ -68,13 +68,20 @@
       "name": "UnitTest",
       "environment_variables": [],
       "tabs": [{
-        "name": "Reports",
+        "name": "Report",
         "path": "mochawesome/mochawesome.html"
+      }, {
+        "name": "Coverage",
+        "path": "coverage/lcov-report/index.html"
       }],
       "resources": [],
       "artifacts": [{
         "source": "mochawesome-reports/**/*",
         "destination": "mochawesome",
+        "type": "build"
+      }, {
+        "source": "coverage",
+        "destination": null,
         "type": "build"
       }, {
         "source": "specs.xml",
@@ -92,6 +99,16 @@
         "arguments": [
           "-c",
           "node_modules/.bin/mocha --opts mocha.opts  --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
+        ],
+        "working_directory": null
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
+          "node_modules/.bin/nyc ./node_modules/.bin/mocha --opts mocha.opts"
         ],
         "working_directory": null
       }]
