@@ -12,7 +12,7 @@
       },
       "destination": "ops/environment",
       "auto_update": true,
-      "name": "OpsEnvironment",
+      "name": "Environment",
       "type": "git"
     }, {
       "url": "https://github.com/caseycurry/LucaTest",
@@ -20,7 +20,7 @@
       "filter": {
         "ignore": []
       },
-      "destination": "ops/environment/test",
+      "destination": "test",
       "auto_update": true,
       "name": "Test",
       "type": "git"
@@ -284,7 +284,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "/bin/bash -c \"cd /vagrant/test && npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
+          "/bin/bash -c \"cp -r ../../test /vagrant/test && cd /vagrant/test && npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
         ],
         "working_directory": "ops/environment"
       }, {
