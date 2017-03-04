@@ -284,9 +284,9 @@
         "arguments": [
           "ssh",
           "-c",
-          "sudo /bin/bash -c \"npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
+          "/bin/bash -c \"npm install && /vagrant/test/node_modules/.bin/wdio --tags=@ContinuousIntegration\""
         ],
-        "working_directory": "test"
+        "working_directory": "ops/environment"
       }, {
         "type": "exec",
         "run_if": "any",
