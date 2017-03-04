@@ -260,22 +260,6 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/usr/local/bin/vagrant",
-        "arguments": [
-          "up"
-        ],
-        "working_directory": "ops/environment"
-      }, {
-        "type": "exec",
-        "run_if": "passed",
-        "on_cancel": null,
-        "command": "ls",
-        "arguments": [],
-        "working_directory": null
-      }, {
-        "type": "exec",
-        "run_if": "passed",
-        "on_cancel": null,
         "command": "cp",
         "arguments": [
           "-R",
@@ -298,6 +282,15 @@
         "on_cancel": null,
         "command": "/usr/local/bin/vagrant",
         "arguments": [
+          "up"
+        ],
+        "working_directory": "ops/environment"
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/usr/local/bin/vagrant",
+        "arguments": [
           "ssh",
           "-c",
           "sudo /bin/bash -c \"source /vagrant/scripts/start-application.sh\""
@@ -311,7 +304,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "/bin/bash -c \"cd /vagrant/test/node_modules/.bin/wdio --tags=@ContinuousIntegration\""
+          "/vagrant/test/node_modules/.bin/wdio --tags=@ContinuousIntegration"
         ],
         "working_directory": "ops/environment"
       }, {
