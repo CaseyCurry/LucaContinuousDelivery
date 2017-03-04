@@ -284,7 +284,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "/bin/bash -c \"cd /vagrant/test && npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
+          "/bin/bash -c \"cd ./test && npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
         ],
         "working_directory": "ops/environment"
       }, {
