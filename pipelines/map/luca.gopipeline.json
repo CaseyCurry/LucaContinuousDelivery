@@ -287,6 +287,15 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
+        "command": "/usr/local/bin/npm",
+        "arguments": [
+          "install"
+        ],
+        "working_directory": "ops/environment/test"
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
         "command": "/usr/local/bin/vagrant",
         "arguments": [
           "ssh",
@@ -302,7 +311,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "/bin/bash -c \"cd /vagrant/test && npm install && ./node_modules/.bin/wdio --tags=@ContinuousIntegration\""
+          "/bin/bash -c \"cd /vagrant/test/node_modules/.bin/wdio --tags=@ContinuousIntegration\""
         ],
         "working_directory": "ops/environment"
       }, {
