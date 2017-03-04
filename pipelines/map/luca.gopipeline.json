@@ -304,7 +304,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && ./node_modules/.bin/wdio wdio.conf.js --tags=@ContinuousIntegration"
+          "cd /vagrant/test && npm rebuild && ./node_modules/.bin/wdio wdio.conf.js --tags=@ContinuousIntegration"
         ],
         "working_directory": "ops/environment"
       }, {
