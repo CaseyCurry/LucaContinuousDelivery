@@ -248,7 +248,7 @@
       "value": "/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
-      "name": "StartEnvironment",
+      "name": "TestEndToEnd",
       "environment_variables": [],
       "tabs": [],
       "resources": [],
