@@ -252,7 +252,15 @@
       "environment_variables": [],
       "tabs": [],
       "resources": [],
-      "artifacts": [],
+      "artifacts": [{
+        "source": "error-shots",
+        "destination": null,
+        "type": "build"
+      }, {
+        "source": "results/0-0.firefox.xml",
+        "destination": null,
+        "type": "test"
+      }],
       "properties": [],
       "run_instance_count": null,
       "timeout": 0,
