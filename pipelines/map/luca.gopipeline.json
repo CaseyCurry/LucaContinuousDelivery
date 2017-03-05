@@ -344,9 +344,9 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source \"ops/environment/dependencies/allure-commandline/bin/allure generate ops/environment/test/results\""
+          "source ./dependencies/allure-commandline/bin/allure generate ./test/results"
         ],
-        "working_directory": null
+        "working_directory": "ops/environment"
       }]
     }]
   }]
