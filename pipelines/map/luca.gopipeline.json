@@ -329,12 +329,12 @@
         "working_directory": "ops/environment"
       }, {
         "type": "exec",
-        "run_if": "any",
+        "run_if": "passed",
         "on_cancel": null,
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source \"dependencies/allure-commandline/bin/allure generate test/results\""
+          "source ./scripts/containers/commit.sh"
         ],
         "working_directory": "ops/environment"
       }, {
@@ -344,9 +344,9 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source ./scripts/containers/commit.sh"
+          "source \"ops/environment/dependencies/allure-commandline/bin/allure generate ops/environment/test/results\""
         ],
-        "working_directory": "ops/environment"
+        "working_directory": null
       }]
     }]
   }]
