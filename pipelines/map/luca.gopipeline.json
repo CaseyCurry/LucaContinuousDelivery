@@ -271,9 +271,8 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "cp",
+        "command": "mv",
         "arguments": [
-          "-R",
           "./test",
           "./ops/environment"
         ],
@@ -335,7 +334,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source \"./dependencies/allure-commandline/bin/allure generate ./test/results\""
+          "source \"dependencies/allure-commandline/bin/allure generate test/results\""
         ],
         "working_directory": "ops/environment"
       }, {
