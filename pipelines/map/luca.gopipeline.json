@@ -253,11 +253,11 @@
       "tabs": [],
       "resources": [],
       "artifacts": [{
-        "source": "error-shots",
+        "source": "ops/environment/test/error-shots",
         "destination": null,
         "type": "build"
       }, {
-        "source": "results/0-0.firefox.xml",
+        "source": "ops/environment/test/results/0-0.firefox.xml",
         "destination": null,
         "type": "test"
       }],
