@@ -250,16 +250,19 @@
     "jobs": [{
       "name": "TestEndToEnd",
       "environment_variables": [],
-      "tabs": [],
+      "tabs": [{
+        "name": "Report",
+        "path": "allure-report/index.html"
+      }],
       "resources": [],
       "artifacts": [{
-        "source": "ops/environment/test/error-shots",
+        "source": "ops/environment/test/results",
         "destination": null,
         "type": "build"
       }, {
-        "source": "ops/environment/test/results/0-0.firefox.xml",
+        "source": "ops/environment/test/allure-report",
         "destination": null,
-        "type": "test"
+        "type": "build"
       }],
       "properties": [],
       "run_instance_count": null,
@@ -323,6 +326,16 @@
         "arguments": [
           "destroy",
           "-f"
+        ],
+        "working_directory": "ops/environment"
+      }, {
+        "type": "exec",
+        "run_if": "any",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
+          "source \"./dependencies/allure-commandline/bin/allure generate ./test/results\""
         ],
         "working_directory": "ops/environment"
       }, {
