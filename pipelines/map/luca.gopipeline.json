@@ -260,7 +260,7 @@
         "destination": null,
         "type": "build"
       }, {
-        "source": "ops/environment/test/allure-report",
+        "source": "ops/environment/allure-report",
         "destination": null,
         "type": "build"
       }],
