@@ -344,7 +344,11 @@
         "command": "curl",
         "arguments": [
           "-XPUT",
-          "http://127.0.0.1:9201/deploy-release/1.2.3"
+          "http://127.0.0.1:9201/deploy-release",
+          "-H",
+          "Content-Type: application/json",
+          "-d",
+          "{\"version\":\"1.2.3\"}"
         ],
         "working_directory": null
       }, {
