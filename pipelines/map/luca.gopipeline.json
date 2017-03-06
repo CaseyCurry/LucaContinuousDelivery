@@ -339,6 +339,16 @@
         "working_directory": "ops/environment"
       }, {
         "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "curl",
+        "arguments": [
+          "-XPUT",
+          "http://127.0.0.1/deploy-release/1.2.3"
+        ],
+        "working_directory": "ops/environment"
+      }, {
+        "type": "exec",
         "run_if": "any",
         "on_cancel": null,
         "command": "/bin/bash",
