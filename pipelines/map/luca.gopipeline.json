@@ -346,7 +346,7 @@
           "-XPUT",
           "http://127.0.0.1:9201/deploy-release/1.2.3"
         ],
-        "working_directory": "ops/environment"
+        "working_directory": null
       }, {
         "type": "exec",
         "run_if": "any",
