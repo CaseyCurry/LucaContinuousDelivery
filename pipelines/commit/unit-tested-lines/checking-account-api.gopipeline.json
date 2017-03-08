@@ -80,8 +80,8 @@
         "destination": "mochawesome",
         "type": "build"
       }, {
-        "source": "coverage",
-        "destination": null,
+        "source": "spec/coverage",
+        "destination": "coverage",
         "type": "build"
       }, {
         "source": "specs.xml",
