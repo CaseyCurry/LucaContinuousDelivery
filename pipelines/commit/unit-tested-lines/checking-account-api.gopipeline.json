@@ -81,7 +81,7 @@
         "type": "build"
       }, {
         "source": "spec/coverage",
-        "destination": "coverage",
+        "destination": null,
         "type": "build"
       }, {
         "source": "specs.xml",
