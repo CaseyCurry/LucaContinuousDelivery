@@ -79,7 +79,7 @@
       }],
       "resources": [],
       "artifacts": [{
-        "source": "mochawesome-reports/**/*",
+        "source": "mochawesome-report/**/*",
         "destination": "mochawesome",
         "type": "build"
       }, {

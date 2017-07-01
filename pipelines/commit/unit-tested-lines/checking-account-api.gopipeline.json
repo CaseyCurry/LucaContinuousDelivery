@@ -76,7 +76,7 @@
       }],
       "resources": [],
       "artifacts": [{
-        "source": "mochawesome-reports/**/*",
+        "source": "mochawesome-report/**/*",
         "destination": "mochawesome",
         "type": "build"
       }, {
@@ -98,7 +98,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "node_modules/.bin/mocha --opts mocha.opts  --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
+          "node_modules/.bin/mocha --opts mocha.opts --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
         ],
         "working_directory": null
       }, {
