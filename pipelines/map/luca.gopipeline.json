@@ -271,9 +271,8 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "cp",
+        "command": "mv",
         "arguments": [
-          "-R",
           "./test",
           "./ops/environment"
         ],
@@ -282,20 +281,18 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/usr/local/bin/vagrant",
+        "command": "/usr/local/bin/npm",
         "arguments": [
-          "up"
+          "install"
         ],
-        "working_directory": "ops/environment"
+        "working_directory": "ops/environment/test"
       }, {
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
         "command": "/usr/local/bin/vagrant",
         "arguments": [
-          "ssh",
-          "-c",
-          "cd /vagrant/test && npm install"
+          "up"
         ],
         "working_directory": "ops/environment"
       }, {
@@ -317,7 +314,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && ./node_modules/.bin/wdio wdio.conf.js --tags=@ContinuousIntegration"
+          "cd /vagrant/test && npm rebuild && ./node_modules/.bin/wdio wdio.conf.js --tags=@ContinuousIntegration"
         ],
         "working_directory": "ops/environment"
       }, {
