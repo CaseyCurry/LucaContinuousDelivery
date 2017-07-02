@@ -295,7 +295,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && /usr/local/bin/npm install"
+          "cd /vagrant/test && npm install"
         ],
         "working_directory": "ops/environment"
       }, {
