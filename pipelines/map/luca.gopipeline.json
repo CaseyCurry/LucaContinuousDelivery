@@ -283,7 +283,8 @@
         "on_cancel": null,
         "command": "/usr/local/bin/npm",
         "arguments": [
-          "install"
+          "install",
+          "--ignore-scripts"
         ],
         "working_directory": "ops/environment/test"
       }, {
