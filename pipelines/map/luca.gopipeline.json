@@ -252,15 +252,11 @@
       "environment_variables": [],
       "tabs": [{
         "name": "Report",
-        "path": "allure-report/index.html"
+        "path": "cucumber-report.html"
       }],
       "resources": [],
       "artifacts": [{
-        "source": "ops/environment/test/results",
-        "destination": null,
-        "type": "build"
-      }, {
-        "source": "ops/environment/allure-report",
+        "source": "ops/environment/test/cucumber-report.html",
         "destination": null,
         "type": "build"
       }],
@@ -315,7 +311,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && npm rebuild && ./node_modules/.bin/wdio wdio.conf.js --tags=@ContinuousIntegration"
+          "cd /vagrant/test && npm rebuild && ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
         ],
         "working_directory": "ops/environment"
       }, {
@@ -352,16 +348,6 @@
           "{\"version\":\"1.2.3\"}"
         ],
         "working_directory": null
-      }, {
-        "type": "exec",
-        "run_if": "any",
-        "on_cancel": null,
-        "command": "/bin/bash",
-        "arguments": [
-          "-c",
-          "source ./dependencies/allure-commandline/bin/allure generate ./test/results"
-        ],
-        "working_directory": "ops/environment"
       }]
     }]
   }]
