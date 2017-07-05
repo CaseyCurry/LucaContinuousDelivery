@@ -311,7 +311,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && npm rebuild && ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
+          "PATH=$PATH:/vagrant/test/node_modules/geckodriver && cd /vagrant/test && npm rebuild && ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
         ],
         "working_directory": "ops/environment"
       }, {
