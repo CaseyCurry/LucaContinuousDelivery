@@ -322,7 +322,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && xvfb-run ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
+          "cd /vagrant/test && xvfb-run --server-args='-screen 0, 1024x768x16' ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
         ],
         "working_directory": "ops/environment"
       }, {
