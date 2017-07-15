@@ -7,7 +7,7 @@
       "branch": "master",
       "filter": {
         "ignore": [
-          "ops/environment/containers"
+          "./containers"
         ]
       },
       "destination": "ops/environment",
