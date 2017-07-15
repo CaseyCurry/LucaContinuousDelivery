@@ -311,7 +311,18 @@
         "arguments": [
           "ssh",
           "-c",
-          "PATH=$PATH:/vagrant/test/node_modules/geckodriver && cd /vagrant/test && npm rebuild && ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
+          "cd /vagrant/test && npm rebuild"
+        ],
+        "working_directory": "ops/environment"
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/usr/local/bin/vagrant",
+        "arguments": [
+          "ssh",
+          "-c",
+          "cd /vagrant/test && xvfb-run ./node_modules/.bin/cucumber-js --tags=@ContinuousIntegration -f json:cucumber-report.json"
         ],
         "working_directory": "ops/environment"
       }, {
