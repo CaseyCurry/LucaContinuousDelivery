@@ -374,7 +374,7 @@
     "clean_working_directory": false,
     "environment_variables": [{
       "name": "PATH",
-      "value": "/usr/local/bin:/usr/bin:/bin"
+      "value": "/Users/caseycurry/Library/Python/3.6/bin:/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
       "name": "Deploy",
