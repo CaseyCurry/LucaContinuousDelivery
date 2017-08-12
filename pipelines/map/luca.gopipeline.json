@@ -352,11 +352,11 @@
         "command": "curl",
         "arguments": [
           "-XPUT",
-          "http://127.0.0.1:9201/deploy-release",
+          "http://127.0.0.1:9201/releases",
           "-H",
           "Content-Type: application/json",
           "-d",
-          "{\"version\":\"1.2.3\"}"
+          "{\"app\":\"Luca\",\"version\":\"1.2.3\"}"
         ],
         "working_directory": null
       }]
