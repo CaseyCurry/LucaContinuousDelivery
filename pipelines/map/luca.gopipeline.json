@@ -389,7 +389,7 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/bin/bash",
+        "command": "sudo /bin/bash",
         "arguments": [
           "-c",
           "source ./scripts/deploy.sh containers/latest"
