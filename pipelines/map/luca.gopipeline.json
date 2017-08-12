@@ -84,7 +84,7 @@
       "value": "/usr/local/bin:/usr/bin:/bin"
     }],
     "jobs": [{
-      "name": "Fetch",
+      "name": "FetchApplication",
       "environment_variables": [],
       "tabs": [],
       "resources": [],
@@ -110,7 +110,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/application"
-      }, {
+      }]
+    }, {
+      "name": "FetchCategoriesApi",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "CategoriesApi",
@@ -128,7 +138,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/categories/api"
-      }, {
+      }]
+    }, {
+      "name": "FetchCheckingAccountApi",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "CheckingAccountApi",
@@ -146,7 +166,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/checking-account/api"
-      }, {
+      }]
+    }, {
+      "name": "FetchCheckingAccountClient",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "CheckingAccountClient",
@@ -164,7 +194,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/checking-account/client"
-      }, {
+      }]
+    }, {
+      "name": "FetchServiceRegistryApi",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "ServiceRegistryApi",
@@ -182,7 +222,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/service-registry/api"
-      }, {
+      }]
+    }, {
+      "name": "FetchServiceRegistryClient",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "ServiceRegistryClient",
@@ -200,7 +250,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/service-registry/client"
-      }, {
+      }]
+    }, {
+      "name": "FetchUsersApi",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "UsersApi",
@@ -218,7 +278,17 @@
         "is_source_a_file": true,
         "source": "version.txt",
         "destination": "ops/environment/services/users/api"
-      }, {
+      }]
+    }, {
+      "name": "FetchUsersClient",
+      "environment_variables": [],
+      "tabs": [],
+      "resources": [],
+      "artifacts": [],
+      "properties": [],
+      "run_instance_count": null,
+      "timeout": 0,
+      "tasks": [{
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "UsersClient",
@@ -395,17 +465,7 @@
           "source ./scripts/deploy.sh containers/latest"
         ],
         "working_directory": "ops/environment"
-      }]
-    }, {
-      "name": "Record",
-      "environment_variables": [],
-      "tabs": [],
-      "resources": [],
-      "artifacts": [],
-      "properties": [],
-      "run_instance_count": null,
-      "timeout": 0,
-      "tasks": [{
+      }, {
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
