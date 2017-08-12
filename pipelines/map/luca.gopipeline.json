@@ -389,10 +389,9 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "sudo /bin/bash",
+        "command": "sudo ./scripts/deploy.sh",
         "arguments": [
-          "-c",
-          "source ./scripts/deploy.sh containers/latest"
+          "containers/latest"
         ],
         "working_directory": "ops/environment"
       }, {
