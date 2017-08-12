@@ -300,7 +300,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "sudo /bin/bash -c \"source /vagrant/scripts/start-application.sh\""
+          "sudo /bin/bash -c \"source /vagrant/scripts/test/start-application.sh\""
         ],
         "working_directory": "ops/environment"
       }, {
@@ -342,7 +342,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source ./scripts/containers/commit.sh"
+          "source ./scripts/test/containers/commit.sh"
         ],
         "working_directory": "ops/environment"
       }, {
