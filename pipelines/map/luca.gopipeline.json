@@ -93,6 +93,15 @@
       "run_instance_count": null,
       "timeout": 0,
       "tasks": [{
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "ls",
+        "arguments": [
+          "~"
+        ],
+        "working_directory": "ops/environment"
+      }, {
         "type": "fetch",
         "run_if": "passed",
         "pipeline": "Application",
