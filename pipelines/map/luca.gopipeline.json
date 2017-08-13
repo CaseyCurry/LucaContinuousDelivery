@@ -96,9 +96,9 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "ls",
+        "command": "echo",
         "arguments": [
-          "~"
+          "$USER"
         ],
         "working_directory": "ops/environment"
       }, {
