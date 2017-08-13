@@ -392,7 +392,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source ./scripts/deploy.sh containers/latest"
+          "source ./scripts/deploy.sh"
         ],
         "working_directory": "ops/environment"
       }, {
