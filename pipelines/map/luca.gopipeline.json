@@ -392,7 +392,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "source ./scripts/deploy.sh"
+          "source ./scripts/prod/deploy.sh"
         ],
         "working_directory": "ops/environment"
       }, {
@@ -409,6 +409,16 @@
           "{\"app\":\"Luca\",\"version\":\"1.2.3\"}"
         ],
         "working_directory": null
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
+          "source ./scripts/prod/start-application.sh"
+        ],
+        "working_directory": "ops/environment"
       }]
     }]
   }]
