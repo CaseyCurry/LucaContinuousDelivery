@@ -68,7 +68,7 @@
       "name": "UnitTest",
       "environment_variables": [{
         "name": "TOKEN_SECRET",
-        "encrypted_value": "ze9+9B3d1Ic="
+        "value": "ze9+9B3d1Ic="
       }],
       "tabs": [{
         "name": "Report",
