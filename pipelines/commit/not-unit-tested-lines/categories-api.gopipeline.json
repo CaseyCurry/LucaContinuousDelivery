@@ -37,7 +37,7 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/usr/local/bin/npm",
+        "command": "$(which npm)",
         "arguments": [
           "install"
         ],
@@ -46,7 +46,7 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/usr/local/bin/npm",
+        "command": "$(which npm)",
         "arguments": [
           "install",
           "mochawesome",
