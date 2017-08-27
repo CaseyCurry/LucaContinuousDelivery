@@ -108,7 +108,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "node_modules/.bin/nyc ./node_modules/.bin/mocha --opts mocha.opts"
+          "TRANSACTIONS_STORE=http://192.168.56.104:5984 node_modules/.bin/nyc ./node_modules/.bin/mocha --opts mocha.opts"
         ],
         "working_directory": null
       }]
