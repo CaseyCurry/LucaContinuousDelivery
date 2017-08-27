@@ -40,6 +40,16 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
+          "printf 'whoami: $(whoami)'"
+        ],
+        "working_directory": null
+      }, {
+        "type": "exec",
+        "run_if": "passed",
+        "on_cancel": null,
+        "command": "/bin/bash",
+        "arguments": [
+          "-c",
           "$(which npm) install"
         ],
         "working_directory": null
