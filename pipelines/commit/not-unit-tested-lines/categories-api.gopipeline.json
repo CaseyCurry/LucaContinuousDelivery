@@ -40,7 +40,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "printf 'whoami: $(whoami)'"
+          "printf $(whoami)"
         ],
         "working_directory": null
       }, {
