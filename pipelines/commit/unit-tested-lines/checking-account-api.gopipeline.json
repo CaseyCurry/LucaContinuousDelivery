@@ -98,7 +98,7 @@
         "command": "/bin/bash",
         "arguments": [
           "-c",
-          "node_modules/.bin/mocha --opts mocha.opts --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
+          "TRANSACTIONS_STORE=http://192.168.56.104:5984 node_modules/.bin/mocha --opts mocha.opts --reporter mocha-multi --reporter-options mochawesome=-,xunit=specs.xml"
         ],
         "working_directory": null
       }, {
