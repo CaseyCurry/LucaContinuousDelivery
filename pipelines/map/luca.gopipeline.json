@@ -277,10 +277,10 @@
         "type": "exec",
         "run_if": "passed",
         "on_cancel": null,
-        "command": "/usr/local/bin/npm",
+        "command": "/bin/bash",
         "arguments": [
-          "install",
-          "--ignore-scripts"
+          "-c",
+          "$(which npm) install --ignore-scripts"
         ],
         "working_directory": "ops/environment/test"
       }, {
@@ -311,7 +311,7 @@
         "arguments": [
           "ssh",
           "-c",
-          "cd /vagrant/test && npm rebuild"
+          "cd /vagrant/test && $(which npm) rebuild"
         ],
         "working_directory": "ops/environment"
       }, {
